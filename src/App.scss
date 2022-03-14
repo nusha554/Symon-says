@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Rowdies', cursive;
 }
 
 .App-logo {
@@ -14,7 +17,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1d1d1f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -40,122 +43,129 @@
 .colorCard {
   height: 200px;
   width: 200px;
-
 }
-.cardWrapper{
+
+.cardWrapper {
   display: flex;
   width: 500px;
   flex-wrap: wrap;
 }
 
-.cardWrapperLost{
+.cardWrapperLost {
   display: flex;
   width: 500px;
   opacity: 0.2;
   flex-wrap: wrap;
 }
 
-.red {
-  box-shadow: 0px 3px 3px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
-  width: 150;
-  height: 150;
-  border-top-right-radius:100%;
-  border-top-left-radius:0;
-  border-bottom-right-radius:0;
-  border-bottom-left-radius: 0;
-  background: #ef3b36;
-  opacity: 0.3;
-  border: 13px solid #4b5585d2;
-  border-left: none;
-  border-bottom: none;
-    &.flash {
-      opacity: 1;
-    }
+.green {
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+  box-sizing: border-box;
+  background: rgb(53, 163, 66);
+  cursor: pointer;
+  animation: 0s ease 0s 1 normal none running none;
+  transition: all 0.2s ease 0s;
+  border-radius: 320px 20px 20px;
+  min-width: 0px;
+  margin: 4px;
+  &.flash {
+    opacity: 1;
   }
+}
+
+.red {
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+  box-sizing: border-box;
+  background-color: rgb(255, 65, 54);
+  cursor: pointer;
+  animation: 0s ease 0s 1 normal none running none;
+  transition: all 0.2s ease 0s;
+  border-radius: 20px 320px 20px 20px;
+  min-width: 0px;
+  margin: 4px;
+  &.flash {
+    opacity: 1;
+  }
+}
 
 .blue {
-  width: 150;
-  height: 150;
-  box-shadow: 0px 3px 3px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius:100%;
-  background-color: #2866c4;
-  opacity: 0.3;
-  border: 13px solid #4b5585d2;
-    &.flash {
-      opacity: 1;
-    }
-}
-
-.green {
-  width: 150;
-  height: 150;
-  box-shadow: 0px 3px 3px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
-  border-top-right-radius: 0;
-  border-top-left-radius: 100%;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background: #34e89e;
-  opacity: 0.3;
-  border: 13px solid #4b5585d2;
-  border-bottom: none;
-    &.flash {
-      opacity: 1;
-    }
-}
-
-.yellow{
-  width: 150;
-  height: 150;
-  box-shadow: 0px 3px 3px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 100%;
-  border-bottom-left-radius: 0;
-  background: #ffc371;
-  opacity: 0.3;
-  border: 13px solid #4b5585d2;
-  border-left: none;
-    &.flash {
-      opacity: 1;
-
-    }
-}
-
-.score {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  right: 48.9%;
-  border-radius: 50%;
-  border: none;
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+  box-sizing: border-box;
+  background-color: #3078e2;
   cursor: pointer;
-  line-height: 100px;
-  font-size: 27px;
-  letter-spacing: 2px;
-  background-color: #d9dee2;
-  color: #24292E;
+  animation: 0s ease 0s 1 normal none running none;
+  transition: all 0.2s ease 0s;
+  border-radius: 20px 20px 20px 320px;
+  min-width: 0px;
+  margin: 4px;
+  &.flash {
+    opacity: 1;
+  }
 }
 
+.yellow {
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+  box-sizing: border-box;
+  cursor: pointer;
+  animation: 0s ease 0s 1 normal none running none;
+  transition: all 0.2s ease 0s;
+  border-radius: 20px 20px 320px;
+  min-width: 0px;
+  margin: 4px;
+  background: #ffad39;
+  &.flash {
+    opacity: 1;
+  }
+}
 
-/* CSS */
-.startButton, .closeButton {
-  top: 65px;
-  left: -30px;
+.score, .startButton {
+  margin: -13px;
+  position: absolute;
+  inset: 0px;
+  margin: auto;
+  color: rgb(233, 224, 224);
+  border: none;
+  background-color: #1b1a1a;
+  font-size: 62px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  z-index: 2;
+  padding: 5px;
+  text-align: center;
+  top: -5px;
+  right: 88px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.closeButton {
+  top: 100px;
+  left: -24px;
+  font-family: 'Rowdies', cursive;
   appearance: none;
-  background-color: #FAFBFC;
+  background-color: #1b1a1a;
+  opacity: 1;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   box-sizing: border-box;
-  color: #24292E;
+  color: rgb(255, 251, 251);
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 14px;
-  font-weight: 500;
   line-height: 20px;
   list-style: none;
   padding: 6px 16px;
@@ -167,61 +177,64 @@
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
+  left: -10px !important;
+  top: 15px;
 }
 
-.closeButton {
-  left: -4.2px !important;
-}
-
-.startButton:hover, .closeButton:hover{
-  background-color: #F3F4F6;
+.closeButton:hover {
+  background-color: rgb(255, 255, 255);
   text-decoration: none;
   transition-duration: 0.1s;
+  color: #1b1a1a;;
 }
 
-.startButton:disabled, .closeButton:disabled {
-  background-color: #FAFBFC;
+
+.closeButton:disabled {
+  background-color: rgb(255, 251, 251);
   border-color: rgba(27, 31, 35, 0.15);
-  color: #959DA5;
+  color: #959da5;
   cursor: default;
 }
 
-.startButton:active, .closeButton:active {
-  background-color: #EDEFF2;
+
+.closeButton:active {
+  background-color: rgb(255, 251, 251);
   box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
   transition: none 0s;
 }
 
-.startButton:focus, .closeButton:focus {
+
+.closeButton:focus {
   outline: 1px transparent;
 }
 
-.startButton:before, .closeButton:before {
+.closeButton:before {
   display: none;
 }
 
-.startButton:-webkit-details-marker, .closeButton:-webkit-details-marker {
+.closeButton:-webkit-details-marker {
   display: none;
 }
-
-
 
 .lost {
-  position: absolute;
-  left: 34.4%;
-  bottom: 19%;
-  width: 500px;
-  height: 500px;
-  // background: radial-gradient(at center center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, #777777 80%), #000044;
-  // background: rgba(224, 236, 225, 0.3) ;
-  color: white;
+  position: relative;
+  left: -29px;
+  bottom: 7em;
+  /* width: 500px; */
+  /* height: 500px; */
+  color: #fffbfb;
   border-radius: 50%;
-  line-height: 459px;
+  line-height: 79px;
   letter-spacing: 10px;
-  font-size: 32px;
+  font-size: 40px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-
+.playIcon {
+  vertical-align: 2px;
+  margin-right: -14px;
+  font-size: 51px;
+  cursor: pointer;
+}
